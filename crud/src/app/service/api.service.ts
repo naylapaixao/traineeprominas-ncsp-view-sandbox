@@ -25,6 +25,14 @@ export class ApiService {
       );
   }
 
+  getUser(id: number): Observable<User> {
+    const url = `${apiUrl}JSON/user/${id}`;
+    return this.http.get<User>(url).pipe(
+      tap(_ => console.log(`leu o usuário id=${id}`)),
+      catchError(this.handleError<User>(`getUser id=${id}`))
+    );
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
