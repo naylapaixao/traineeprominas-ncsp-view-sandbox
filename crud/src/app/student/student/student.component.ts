@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Student } from 'src/model/student';
+import { Course } from 'src/model/course';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { DataSource } from '@angular/cdk/table';
 
 @Component({
   selector: 'app-student',

@@ -14,6 +14,7 @@ import { CourseAddComponent} from 'src/app/course/course-add/course-add.componen
 import { CourseUpdateComponent} from 'src/app/course/course-update/course-update.component';
 import { StudentComponent } from 'src/app/student/student/student.component';
 import  { StudentIdComponent } from 'src/app/student/student-id/student-id.component';
+import  { StudentAddComponent } from 'src/app/student/student-add/student-add.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -87,6 +88,11 @@ const routes: Routes = [
     component: StudentIdComponent,
     data:{title: 'Aluno'} 
   },
+  {
+    path: 'create/student',
+    component: StudentAddComponent,
+    data:{title: 'Novo Aluno'} 
+  }
 
 
 ];

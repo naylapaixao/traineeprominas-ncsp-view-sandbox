@@ -36,6 +36,7 @@ import { CourseAddComponent } from './course/course-add/course-add.component';
 import { CourseUpdateComponent } from './course/course-update/course-update.component';
 import { StudentComponent } from './student/student/student.component';
 import { StudentIdComponent } from './student/student-id/student-id.component';
+import { StudentAddComponent } from './student/student-add/student-add.component';
 
 
 
@@ -56,7 +57,8 @@ import { StudentIdComponent } from './student/student-id/student-id.component';
     CourseAddComponent,
     CourseUpdateComponent,
     StudentComponent,
-    StudentIdComponent
+    StudentIdComponent,
+    StudentAddComponent
   ],
   imports: [
     BrowserModule,
