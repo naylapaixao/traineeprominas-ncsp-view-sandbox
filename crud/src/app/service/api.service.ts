@@ -113,6 +113,14 @@ export class ApiService {
     );
   }
 
+  deleteCourse(id): Observable<Course> {
+    const url = `${apiUrl}Course/${id}`;
+    return this.http.delete<Course>(url, httpOptions).pipe(
+      tap(_ => console.log(`remove o usuário com id=${id}`)),
+      catchError(this.handleError<Course>('deleteCourse'))
+    );
+  }
+
 
 
 

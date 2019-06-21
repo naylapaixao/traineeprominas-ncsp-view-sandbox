@@ -9,6 +9,7 @@ import { TeacherIdComponent} from 'src/app/teacher/teacher-id/teacher-id.compone
 import { TeacherAddComponent } from 'src/app/teacher/teacher-add/teacher-add.component';
 import { TeacherUpdateComponent} from 'src/app/teacher/teacher-update/teacher-update.component';
 import { CourseComponent } from 'src/app/course/course/course.component';
+import { CourseIdComponent} from 'src/app/course/course-id/course-id.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -56,6 +57,11 @@ const routes: Routes = [
     path:'course',
     component: CourseComponent,
     data:{title: 'Lista de Cursos'}
+  },
+  {
+    path:'course/:id',
+    component: CourseIdComponent,
+    data:{title: 'Curso'}
   }
 
 ];
