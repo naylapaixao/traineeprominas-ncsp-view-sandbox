@@ -33,6 +33,29 @@ export class ApiService {
     );
   }
 
+  postUser(user): Observable<User> {
+    return this.http.post<User>(`${apiUrl}user`, user, httpOptions).pipe(
+      tap((user1: User) => console.log(`adicionou o usuário com w/ id=${user1.id}`)),
+      catchError(this.handleError<User>('postUser'))
+    );
+  }
+
+  putUser(id, user): Observable<any> {
+    const url = `${apiUrl}user/${id}`;
+    return this.http.put(url, user, httpOptions).pipe(
+      tap(_ => console.log(`atualiza o usuário com id=${id}`)),
+      catchError(this.handleError<any>('updateUser'))
+    );
+  }
+
+  deleteUser(id): Observable<User> {
+    const url = `${apiUrl}user/${id}`;
+    return this.http.delete<User>(url, httpOptions).pipe(
+      tap(_ => console.log(`remove o usuário com id=${id}`)),
+      catchError(this.handleError<User>('deleteUser'))
+    );
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

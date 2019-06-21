@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import {
   MatToolbarModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
+import { UserUpdateComponent } from './user/user-update/user-update.component';
+import { from } from 'rxjs';
+import { UserAddComponent } from './user/user-add/user-add.component';
 
 
 
@@ -30,10 +34,14 @@ import { LayoutModule } from '@angular/cdk/layout';
     UserComponent,
     TeacherComponent,
     UserIdComponent,
-    MenuComponent
+    MenuComponent,
+    UserUpdateComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

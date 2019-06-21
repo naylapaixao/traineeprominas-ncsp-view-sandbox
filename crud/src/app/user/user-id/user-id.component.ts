@@ -27,4 +27,17 @@ export class UserIdComponent implements OnInit {
       });
   }
 
+  deleteUser(id) {
+    this.isLoadingResults = true;
+    this.api.deleteUser(id)
+      .subscribe(res => {
+          this.isLoadingResults = false;
+          this.router.navigate(['/usuario']);
+        }, (err) => {
+          console.log(err);
+          this.isLoadingResults = false;
+        }
+      );
+  }
+
 }
