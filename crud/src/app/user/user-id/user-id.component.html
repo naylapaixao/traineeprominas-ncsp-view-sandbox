@@ -14,7 +14,7 @@
     </mat-card-header>
     
     <mat-card-actions>
-      <button mat-flat-button color="primary" class="teste" [routerLink]="['/', user.id]"><mat-icon>edit</mat-icon> Editar</button>
+      <button mat-flat-button color="primary" class="teste" [routerLink]="['/update/user', user.id]"><mat-icon>edit</mat-icon> Editar</button>
       <button mat-flat-button color="warn" (click)="deleteUser(user.id)"><mat-icon>delete</mat-icon> Excluir</button>
     </mat-card-actions>
   </mat-card>
