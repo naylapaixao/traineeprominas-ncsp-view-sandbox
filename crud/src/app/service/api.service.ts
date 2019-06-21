@@ -5,6 +5,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 import { User } from 'src/model/user';
 import { Teacher } from 'src/model/teacher';
 import { Course } from 'src/model/course';
+import { Student } from 'src/model/student';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -136,6 +137,29 @@ export class ApiService {
     );
   }
 
+  getStudents(): Observable<Student[]> {
+    return this.http.get<Student[]>(`${apiUrl}student`)
+      .pipe(
+        tap(students => console.log('leu os cursos')),
+        catchError(this.handleError('getStudents', []))
+      );
+  }
+
+  getStudent(id: number): Observable<Student> {
+    const url = `${apiUrl}JSON/student/${id}`;
+    return this.http.get<Student>(url).pipe(
+      tap(_ => console.log(`leu o usuário id=${id}`)),
+      catchError(this.handleError<Student>(`getStudent id=${id}`))
+    );
+  }
+
+  deleteStudent(id): Observable<Student> {
+    const url = `${apiUrl}Student/${id}`;
+    return this.http.delete<Student>(url, httpOptions).pipe(
+      tap(_ => console.log(`remove o usuário com id=${id}`)),
+      catchError(this.handleError<Student>('deleteStudent'))
+    );
+  }
 
 
 

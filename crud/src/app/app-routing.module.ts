@@ -12,6 +12,7 @@ import { CourseComponent } from 'src/app/course/course/course.component';
 import { CourseIdComponent} from 'src/app/course/course-id/course-id.component';
 import { CourseAddComponent} from 'src/app/course/course-add/course-add.component';
 import { CourseUpdateComponent} from 'src/app/course/course-update/course-update.component';
+import { StudentComponent } from 'src/app/student/student/student.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -74,7 +75,13 @@ const routes: Routes = [
     path:'update/course/:id',
     component: CourseUpdateComponent,
     data:{title: 'Editar Curso'}
+  },
+  {
+    path: 'student',
+    component: StudentComponent,
+    data: { title: 'Lista de estudantes' }
   }
+
 
 ];
 
