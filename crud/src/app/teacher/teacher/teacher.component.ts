@@ -1,27 +1,29 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from '../../service/api.service';
-import { User } from 'src/model/user';
+import { Teacher } from 'src/model/teacher';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-teacher',
+  templateUrl: './teacher.component.html',
+  styleUrls: ['./teacher.component.css']
 })
-export class UserComponent implements OnInit {
-  displayedColumns: string[] = [ 'id', 'name', 'lastName', 'profile', 'action'];
-  dataSource: MatTableDataSource<User>;
+export class TeacherComponent implements OnInit {
+
+  displayedColumns: string[] = [ 'id', 'name', 'lastName', 'phd', 'action'];
+  dataSource: MatTableDataSource<Teacher>;
   isLoadingResults = true;
 
   constructor(private api: ApiService) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
+
   ngOnInit() {
-    this.api.getUsers()
+    this.api.getTeachers()
       .subscribe(res => {
-        this.dataSource = new MatTableDataSource<User>(res);
+        this.dataSource = new MatTableDataSource<Teacher>(res);
         this.dataSource.paginator = this.paginator;
         console.log(this.dataSource);
         this.isLoadingResults = false;

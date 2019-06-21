@@ -5,8 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/user">Usuários</a>
-      <a mat-list-item href="#">Professores</a>
+      <a mat-list-item href="/user" routerLinkActive="active">Usuários</a>
+      <a mat-list-item href="/teacher">Professores</a>
       <a mat-list-item href="#">Cursos</a>
       <a mat-list-item href="#">Alunos</a>
     </mat-nav-list>
@@ -24,5 +24,6 @@
       <span>View Crud</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
