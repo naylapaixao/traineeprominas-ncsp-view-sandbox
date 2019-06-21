@@ -28,12 +28,12 @@ export class StudentIdComponent implements OnInit {
       });
   }
 
-  deletestudent(id) {
+  deleteStudent(id) {
     this.isLoadingResults = true;
     this.api.deleteStudent(id)
       .subscribe(res => {
           this.isLoadingResults = false;
-          this.router.navigate(['/estudante']);
+          this.router.navigate(['/student']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;
