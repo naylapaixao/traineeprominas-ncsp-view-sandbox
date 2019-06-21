@@ -26,6 +26,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { from } from 'rxjs';
 import { UserAddComponent } from './user/user-add/user-add.component';
+<<<<<<< HEAD
 import { TeacherIdComponent } from './teacher/teacher-id/teacher-id.component';
 import { TeacherUpdateComponent } from './teacher/teacher-update/teacher-update.component';
 import { TeacherAddComponent } from './teacher/teacher-add/teacher-add.component';
@@ -38,6 +39,8 @@ import { StudentComponent } from './student/student/student.component';
 import { StudentIdComponent } from './student/student-id/student-id.component';
 import { StudentAddComponent } from './student/student-add/student-add.component';
 import { StudentUpdateComponent } from './student/student-update/student-update.component';
+=======
+>>>>>>> 6540bb15ee037225e928c758629c549e4d2418fe
 
 
 
