@@ -30,6 +30,7 @@ import { TeacherIdComponent } from './teacher/teacher-id/teacher-id.component';
 import { TeacherUpdateComponent } from './teacher/teacher-update/teacher-update.component';
 import { TeacherAddComponent } from './teacher/teacher-add/teacher-add.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { CourseComponent } from './course/course/course.component';
 
 
 
@@ -44,7 +45,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     UserAddComponent,
     TeacherIdComponent,
     TeacherUpdateComponent,
-    TeacherAddComponent
+    TeacherAddComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

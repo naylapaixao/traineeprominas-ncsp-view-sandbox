@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { catchError, tap, map } from 'rxjs/operators';
 import { User } from 'src/model/user';
 import { Teacher } from 'src/model/teacher';
+import { Course } from 'src/model/course';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -95,6 +96,25 @@ export class ApiService {
       catchError(this.handleError<any>('updateTeacher'))
     );
   }
+
+  getCourses(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${apiUrl}course`)
+      .pipe(
+        tap(courses => console.log('leu os cursos')),
+        catchError(this.handleError('getCourses', []))
+      );
+  }
+
+  getCourse(id: number): Observable<Course> {
+    const url = `${apiUrl}JSON/course/${id}`;
+    return this.http.get<Course>(url).pipe(
+      tap(_ => console.log(`leu o usuário id=${id}`)),
+      catchError(this.handleError<Course>(`getCourse id=${id}`))
+    );
+  }
+
+
+
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
