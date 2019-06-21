@@ -11,6 +11,7 @@ import { TeacherUpdateComponent} from 'src/app/teacher/teacher-update/teacher-up
 import { CourseComponent } from 'src/app/course/course/course.component';
 import { CourseIdComponent} from 'src/app/course/course-id/course-id.component';
 import { CourseAddComponent} from 'src/app/course/course-add/course-add.component';
+import { CourseUpdateComponent} from 'src/app/course/course-update/course-update.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -68,6 +69,11 @@ const routes: Routes = [
     path:'create/course',
     component: CourseAddComponent,
     data:{title: 'Novo Curso'}
+  },
+  {
+    path:'update/course/:id',
+    component: CourseUpdateComponent,
+    data:{title: 'Editar Curso'}
   }
 
 ];
