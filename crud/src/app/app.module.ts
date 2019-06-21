@@ -27,6 +27,9 @@ import { UserUpdateComponent } from './user/user-update/user-update.component';
 import { from } from 'rxjs';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { TeacherIdComponent } from './teacher/teacher-id/teacher-id.component';
+import { TeacherUpdateComponent } from './teacher/teacher-update/teacher-update.component';
+import { TeacherAddComponent } from './teacher/teacher-add/teacher-add.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -39,7 +42,9 @@ import { TeacherIdComponent } from './teacher/teacher-id/teacher-id.component';
     MenuComponent,
     UserUpdateComponent,
     UserAddComponent,
-    TeacherIdComponent
+    TeacherIdComponent,
+    TeacherUpdateComponent,
+    TeacherAddComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ import { TeacherIdComponent } from './teacher/teacher-id/teacher-id.component';
     MatTableModule,
     MatToolbarModule,
     LayoutModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

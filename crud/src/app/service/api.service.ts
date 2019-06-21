@@ -81,6 +81,21 @@ export class ApiService {
     );
   }
 
+  postTeacher(teacher): Observable<Teacher> {
+    return this.http.post<Teacher>(`${apiUrl}teacher`, teacher, httpOptions).pipe(
+      tap((teacher1: Teacher) => console.log(`adicionou o usuário com w/ id=${teacher1.id}`)),
+      catchError(this.handleError<Teacher>('postTeacher'))
+    );
+  }
+
+  putTeacher(id, teacher): Observable<any> {
+    const url = `${apiUrl}teacher/${id}`;
+    return this.http.put(url, teacher, httpOptions).pipe(
+      tap(_ => console.log(`atualiza o usuário com id=${id}`)),
+      catchError(this.handleError<any>('updateTeacher'))
+    );
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

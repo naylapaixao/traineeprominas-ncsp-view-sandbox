@@ -6,6 +6,8 @@ import { UserAddComponent } from "src/app/user/user-add/user-add.component";
 import { UserUpdateComponent } from 'src/app/user/user-update/user-update.component';
 import { TeacherComponent } from 'src/app/teacher/teacher/teacher.component';
 import { TeacherIdComponent} from 'src/app/teacher/teacher-id/teacher-id.component';
+import { TeacherAddComponent } from 'src/app/teacher/teacher-add/teacher-add.component';
+import { TeacherUpdateComponent} from 'src/app/teacher/teacher-update/teacher-update.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -38,7 +40,18 @@ const routes: Routes = [
     path: 'teacher/:id',
     component: TeacherIdComponent,
     data:{title: 'Professor'} 
+  },
+  {
+    path:'create/teacher',
+    component: TeacherAddComponent,
+    data:{title: 'Novo Usuário'}
+  },
+  {
+    path:'update/teacher/:id',
+    component: TeacherUpdateComponent,
+    data:{title: 'Editar Professor'}
   }
+
 ];
 
 @NgModule({
