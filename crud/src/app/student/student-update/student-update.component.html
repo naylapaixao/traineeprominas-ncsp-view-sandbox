@@ -1,7 +1,7 @@
 <div>
-    <h3>Novo Estudante</h3>
+    <h3>Editar Estudante</h3>
   </div>
-  <form class="form-width example-container" [formGroup]="studentForm" (ngSubmit)="addStudent(studentForm.value)">
+  <form class="form-width example-container" [formGroup]="studentForm" (ngSubmit)="putStudent(studentForm.value)">
     <mat-form-field>
       <input matInput name="name" placeholder="Nome do estudante" formControlName="name">
     </mat-form-field>
@@ -9,7 +9,7 @@
       <input  matInput name="lastName" placeholder="Sobrenome" formControlName="lastName">
     </mat-form-field>
     <mat-form-field>
-      <input  matInput name="age" placeholder="Idade" type="number" formControlName="age">
+      <input  matInput type="number" name="age" placeholder="Idade" formControlName="age">
     </mat-form-field>
     <mat-form-field>
       <mat-label >Curso</mat-label>
@@ -18,5 +18,5 @@
       </mat-select>
     </mat-form-field>
   
-    <button type="submit" [disabled]="!studentForm.valid" mat-button color="primary" >Adicionar</button>
-    </form>
+    <button type="submit" [disabled]="!studentForm.valid" mat-button color="primary" >Editar</button>
+  </form>
