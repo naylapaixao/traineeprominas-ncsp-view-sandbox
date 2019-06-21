@@ -27,4 +27,19 @@ export class TeacherIdComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
+
+  deleteTeacher(id) {
+    this.isLoadingResults = true;
+    this.api.deleteTeacher(id)
+      .subscribe(res => {
+          this.isLoadingResults = false;
+          this.router.navigate(['/teacher']);
+        }, (err) => {
+          console.log(err);
+          this.isLoadingResults = false;
+        }
+      );
+  }
+
+
 }
