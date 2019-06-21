@@ -30,7 +30,7 @@ export class TeacherAddComponent implements OnInit {
       .subscribe(res => {
           const id = res.id;
           this.isLoadingResults = false;
-          this.router.navigate(['/professor']);
+          this.router.navigate(['/teacher']);
         }, (err) => {
           console.log(err);
           this.isLoadingResults = false;

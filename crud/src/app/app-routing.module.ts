@@ -10,6 +10,7 @@ import { TeacherAddComponent } from 'src/app/teacher/teacher-add/teacher-add.com
 import { TeacherUpdateComponent} from 'src/app/teacher/teacher-update/teacher-update.component';
 import { CourseComponent } from 'src/app/course/course/course.component';
 import { CourseIdComponent} from 'src/app/course/course-id/course-id.component';
+import { CourseAddComponent} from 'src/app/course/course-add/course-add.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
@@ -62,6 +63,11 @@ const routes: Routes = [
     path:'course/:id',
     component: CourseIdComponent,
     data:{title: 'Curso'}
+  },
+  {
+    path:'create/course',
+    component: CourseAddComponent,
+    data:{title: 'Novo Curso'}
   }
 
 ];

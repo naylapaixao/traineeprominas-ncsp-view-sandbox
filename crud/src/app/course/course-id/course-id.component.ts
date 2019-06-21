@@ -10,7 +10,7 @@ import { ApiService } from '../../service/api.service';
 })
 export class CourseIdComponent implements OnInit {
 
-  course: Course = { id: null, name: '', city: '',  period: null, teacher: []};
+  course: Course = { id: null, name: '', city: '',  period: null, teachers: []};
   isLoadingResults = true;
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService) { }
 

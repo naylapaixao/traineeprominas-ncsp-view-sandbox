@@ -113,6 +113,21 @@ export class ApiService {
     );
   }
 
+  postCourse(course): Observable<Course> {
+    return this.http.post<Course>(`${apiUrl}course`, course, httpOptions).pipe(
+      tap((course1: Course) => console.log(`adicionou o curso com w/ id=${course1.id}`)),
+      catchError(this.handleError<Course>('postCourse'))
+    );
+  }
+
+  putCourse(id, course): Observable<any> {
+    const url = `${apiUrl}course/${id}`;
+    return this.http.put(url, course, httpOptions).pipe(
+      tap(_ => console.log(`atualiza o usuário com id=${id}`)),
+      catchError(this.handleError<any>('updateCourse'))
+    );
+  }
+
   deleteCourse(id): Observable<Course> {
     const url = `${apiUrl}Course/${id}`;
     return this.http.delete<Course>(url, httpOptions).pipe(

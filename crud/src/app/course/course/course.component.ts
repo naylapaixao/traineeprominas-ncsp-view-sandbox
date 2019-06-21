@@ -12,7 +12,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class CourseComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'id', 'name', 'period', 'city', 'teacher', 'action'];
+  displayedColumns: string[] = [ 'id', 'name', 'period', 'city', 'teachers', 'action'];
   dataSource: MatTableDataSource<Course>;
   
   isLoadingResults: boolean;
