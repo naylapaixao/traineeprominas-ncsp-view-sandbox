@@ -19,11 +19,11 @@ h2{
 
 .botoes {
     color: white;
-    text-transform: uppercase;
     background: #146418;
 }
 
 .botoes-add {
+    text-transform: uppercase;
     margin: 15px 10px;
 }
 
