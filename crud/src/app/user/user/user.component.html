@@ -1,6 +1,6 @@
 <div>
-    <button mat-flat-button color="accent" routerLink="/create/user" selected>Adicionar Novo Usuário</button>  
-  <h3>Lista de Usuários</h3>
+    <button mat-flat-button class="botoes botoes-add" routerLink="/create/user" selected>Adicionar Novo Usuário</button>  
+  <h2><strong> Lista de Usuários</strong></h2>
 </div>
 <div>
     <mat-form-field>
@@ -35,7 +35,7 @@
 
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef>  </th>
-    <td mat-cell *matCellDef="let row"> <button mat-flat-button color="accent" routerLink="/user/{{row.id}}" selected>Ver mais</button></td>
+    <td mat-cell *matCellDef="let row"> <button mat-flat-button class = "botoes" color="accent" routerLink="/user/{{row.id}}" selected>Mais detalhes</button></td>
   </ng-container>
 
   <!-- Position Column -->

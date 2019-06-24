@@ -1,8 +1,32 @@
 table{
-    width: 90%;
+    width: 100%;
+    /* text-align:center; */
 }
+
+h2{
+    padding: 0px 10px;
+}
+
+/* ng-container {
+    text-align:center;
+} */
 
 .mat-form-field {
     font-size: 14px;
-    width: 100%;
+    padding: 15px;
+    width: 30%;
   }
+
+.botoes {
+    color: white;
+    text-transform: uppercase;
+    background: #146418;
+}
+
+.botoes-add {
+    margin: 15px 10px;
+}
+
+mat-paginator {
+    width: 100%;
+}
