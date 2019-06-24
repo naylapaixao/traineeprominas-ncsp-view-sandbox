@@ -4,5 +4,10 @@
 }
 
 .example-container > * {
-  width: 100%;
+  padding: 0px 10px;
+  width: 80%;
+}
+
+h2{
+  padding: 0px 10px;
 }
