@@ -40,7 +40,7 @@ export class CourseUpdateComponent implements OnInit {
         name: data.name,
         period: data.period,
         city: data.city,
-        teacher: data.teachers
+        teachers: data.teachers
       });
     });
   }
